@@ -1025,3 +1025,14 @@ def cmd_help(s, r=None):
 
         msg = 'Sorry. No help available on that subject.'
         s.message(msg)
+
+def cmd_map(s, r=None):
+    '''map
+
+    Shows you the map.
+
+    '''
+
+    lines = open('MAP').readlines()
+    for line in lines:
+        s.message(line.rstrip())
