@@ -216,9 +216,6 @@ class Room(TZContainer):
         The action should also be passed on to all items that are carried
             by characters in this room (and to items inside of containers).
 
-        Uses a callLater to make sure that reactions to the action occur
-            after the action has been reported.
-
         Any player, mob, item or room which wants to react to an action
             should define a near_<action> method which accepts the info dict.
 
@@ -228,8 +225,9 @@ class Room(TZContainer):
 
         '''
 
-        delay = info.get('delay', 0.1)
-        reactor.callLater(delay, self._action, info)
+        #delay = info.get('delay', 0.1)
+        #reactor.callLater(delay, self._action, info)
+        self._action(info)
         #raise SyntaxError
 
     def _action(self, info):
