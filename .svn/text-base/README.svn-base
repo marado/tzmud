@@ -1,0 +1,77 @@
+TZMud is a Python MUD server.
+
+Check for the latest updates at:
+    http://tzmud.googlecode.com/
+
+
+INSTALLING
+
+First install the requirements:
+    Python (http://www.python.org/)
+        [tested with Python-2.6.5]
+    Twisted (http://twistedmatrix.com/)
+        [tested with Twisted-10.0.0]
+    ZODB3 (http://pypi.python.org/pypi/ZODB3/)
+        [tested with ZODB3-3.9.4]
+    Pyparsing (http://pyparsing.wikispaces.com/)
+        [tested with Pyparsing-1.5.2]
+
+    If you want to run the (optional) web server,
+        you will also need:
+        Nevow (http://divmod.org/trac/wiki/DivmodNevow)
+            [tested with Nevow-0.10.0]
+
+Unpack the TZMud distribution and run the
+TZMud control program tzcontrol.py with:
+    python tzcontrol.py -s
+
+That command will generate an empty configuration
+file at etc/conf.py where you can add changes to
+the settings from etc/defaults.py
+
+
+RUNNING
+
+If you want to start with a minimal world, then
+the first time you run the server, run the TZMud
+control program as:
+    python tzcontrol.py -f
+
+That command will generate a "fresh" database with
+a couple of simple rooms. The first character you
+create will be an administrator.
+
+If you would like to use the more built up world
+that is included with the distribution, then run
+the TZMud control program as:
+    python tzcontrol.py -z
+
+That command will restore the database 0.Data.fs
+from the var/db/backup directory. All players
+have been removed from the database, so you will
+still be able to create the first admin character.
+
+
+CONNECTING
+
+Use a MUD client (or telnet if you want to play the
+old-school way). The default port is 4444. If you
+are running the server on your own computer, try
+connecting to localhost:4444 or 127.0.0.1:4444
+
+Once connected, create a character with
+    create <make up a name> <make up a password>
+(Do not include the angle brackets <>)
+
+The first character created will be an administrator.
+
+
+DEVELOPING
+
+TZMud is Free Software, released under the GPL.
+
+If you make any changes or improvements, please
+consider sharing your changes with the project.
+
+For instructions on checking out the latest code see:
+    http://code.google.com/p/tzmud/source/checkout

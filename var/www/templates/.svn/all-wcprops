@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/406/trunk/var/www/templates
+END
+exits.html
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/269/trunk/var/www/templates/exits.html
+END
+footer.html
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/207/trunk/var/www/templates/footer.html
+END
+rooms.html
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/406/trunk/var/www/templates/rooms.html
+END
+process_and_redirect.html
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/269/trunk/var/www/templates/process_and_redirect.html
+END
+head.html
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/207/trunk/var/www/templates/head.html
+END
+edit.html
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/287/trunk/var/www/templates/edit.html
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/387/trunk/var/www/templates/index.html
+END
+header.html
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/268/trunk/var/www/templates/header.html
+END

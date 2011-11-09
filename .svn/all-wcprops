@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 23
+/svn/!svn/ver/450/trunk
+END
+MOTD
+K 25
+svn:wc:ra_dav:version-url
+V 28
+/svn/!svn/ver/434/trunk/MOTD
+END
+TODO
+K 25
+svn:wc:ra_dav:version-url
+V 28
+/svn/!svn/ver/443/trunk/TODO
+END
+tzcontrol.py
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/436/trunk/tzcontrol.py
+END
+.tar-ignore
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/67/trunk/.tar-ignore
+END
+announce
+K 25
+svn:wc:ra_dav:version-url
+V 32
+/svn/!svn/ver/429/trunk/announce
+END
+COPYING
+K 25
+svn:wc:ra_dav:version-url
+V 29
+/svn/!svn/ver/2/trunk/COPYING
+END
+tzmud.tac
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/svn/!svn/ver/324/trunk/tzmud.tac
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 30
+/svn/!svn/ver/415/trunk/README
+END

@@ -1,0 +1,21 @@
+<html xmlns:nevow="http://nevow.com/ns/nevow/0.1">
+<head nevow:render="head" />
+<body>
+    <div nevow:render="header" />
+
+    <div nevow:render="process" />
+
+    <h1>Edit Object</h1>
+
+    <h2 nevow:render="objclass" />
+
+    <p nevow:render="clsinfo" />
+
+    <div nevow:render="settings" />
+
+    <div nevow:render="exits" />
+    <div nevow:render="addexitform" />
+
+    <div nevow:render="footer" />
+</body>
+</html>

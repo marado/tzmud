@@ -1,0 +1,35 @@
+<html xmlns:nevow="http://nevow.com/ns/nevow/0.1">
+<head nevow:render="head" />
+<body>
+    <div nevow:render="header" />
+
+    <h1>TZMud Web Interface</h1>
+
+    <div class="leftcol">
+        <div class="index_players">
+        <h3>Players</h3>
+        <div nevow:data="players" nevow:render="index_players" />
+        </div>
+
+        <div class="index_mobs">
+        <h3>Mobs</h3>
+        <div nevow:data="mobs" nevow:render="idtable_sortid" />
+        </div>
+
+        <div class="index_items">
+        <h3>Items</h3>
+        <div nevow:data="items" nevow:render="idtable_sortid" />
+        </div>
+    </div>
+
+    <div class="index_rooms">
+    <h3><a href="/rooms">Rooms</a></h3>
+    <div nevow:data="rooms" nevow:render="index_rooms" />
+        <div nevow:render="addroomform" />
+    </div>
+
+    <br clear="all" />
+
+    <div nevow:render="footer" />
+</body>
+</html>

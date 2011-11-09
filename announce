@@ -1,0 +1,59 @@
+TZMud is a Python MUD server.
+http://tzmud.googlecode.com/
+
+A MUD is a text-based virtual environment
+accessed via telnet, or with a specialised
+MUD client.
+
+TZMud development is still in early stages,
+focusing on API and server stability.
+
+TZMud uses several high-quality Python
+libraries to facilitate rapid development:
+    Twisted, ZODB, and Pyparsing.
+
+TZMud is released under GPLv3.
+
+Changes in TZMud-0.9:
+    + Configuration changes
+        - improved handling of utf-8 text (see conf and defaults)
+        - added "speech mode" configuration option
+
+    + MUD interface changes
+        - better automated creation of exits when digging
+        - improved messages
+            - digging
+            - wear and remove
+            - settings
+        - improved following
+        - show things worn separate from other things in inventory
+        - character home is now a setting
+        - allow "a", "an", or "the" in front of any object
+
+    + API changes
+        - moved Exit to separate exits module
+        - allow for "<character> in room" and "<mob> in room"
+        - all objects now have a name_aka attribute
+        - items.getname now looks at name_aka
+        - extensive rework of TZObj metaclass
+
+    + DB changes
+        - run upgradeall during any version upgrade
+        - set player name separately during upgrade
+        - version bumped
+
+    + Wizard changes
+        - show which module an object is defined in for @info <object>
+        - show which containers an object is in for @info <object>
+        - make exits @list able
+        - added @tell command (talkmode setting allows any player to tell)
+        - fixed problem destroying some objects
+
+    + Web interface
+        - fixed spurious teleport when using stale page
+        - update room widget after teleport
+        - show wiz/admin and current room for player list on front page
+        - allow changing object names from the web
+        - allow creating new room when building an exit
+        - allow changing name_aka from the web
+        - switch to checkboxes for boolean attributes

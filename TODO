@@ -1,0 +1,57 @@
+# MUD Server
+- unify parsed object names so that all parse actions can access
+    the same set of objects. Right now, some actions cannot access
+    objects with names that have "to " in them, while others are
+    blind to "as " or "is ".
+- think about having .room only on player, not on protocol.
+- look for any other attrs that might get corrupted by someone
+    manually setting something. (like character.room)
+- remember most recently used item, so that a pronoun will work.
+    for example ...
+    get rose
+    drop it
+- minotaur mob digs a maze and patrols it
+- combat system
+- skill system
+- expand the initial world
+- Die item -- magical attack
+- Human/Humanoid mob for subclassing
+- potion of see invisible things
+    or SeeInvRing allows character to see invisible things
+- Power class? So different items can be given the same power
+- item exchanging (give, take, accept, steal)
+- Group items with the same name in the inventory (ie. 2 roses)
+- fix tzcontrol to work properly on windows
+- set ownership for cloned objects
+- CrystalBall item which can locate/spy on objects
+- add Region object to group Rooms
+- a way to export objects from / import objects to the database
+- should be able to use the mirror
+- more general "use" framework
+    maybe pass everything after "use thing" for further parsing
+- allow settings that are lists (and append/delete from lists)
+- fix ordering of messages when characters are following someone
+- objects that affect attributes might step on each other
+    for instance, character might be wearing an InvRing, then
+    take an InvPotion, then remove the InvRing. Should stay
+    invisible until the potion wears out, but right now will
+    be visible
+
+    to solve this, I am considering a sort of "modifier stack"
+- add all TODO items to the googlecode issue tracker
+- allow players to set their own short and long descriptions
+- allow Spawner to spawn more than 1 of its mobtype in the room
+- make plugins rebuildable
+- fix getting coins leaves None in character inventory list
+- make help strings single line (use backslash?) so that player
+    can set own line wrap width and still have lines be nicely
+    formatted.
+- plain @info should show something more useful
+- mobs should not have "the" placed in front of their names
+- add a way to see which keys can unlock a door
+
+# Web Server
+- Build MUD areas by web.
+- some parts of site only available when logged in.
+- more robust response to entering wrong type of value
+    - non-integer in int setting field
