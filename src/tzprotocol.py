@@ -142,8 +142,12 @@ class TZ(basic.LineReceiver):
             elif player.logged_in:
                 if player.check_password(pwtext):
                     self.simessage('Player already logged in.')
-                    self.simessage('Use "purge <name> <password>" to disconnect other session.')
-                    print 'player', player.name, 'already logged in'
+                    if conf.auto_purge:
+                        self._purge(player)
+                        self.login(r)
+                    else:
+                        self.simessage('Use "purge <name> <password>" to disconnect other session.')
+                        print 'player', player.name, 'already logged in'
                 else:
                     self.simessage('Incorrect user name or password.')
                     print 'player', player.name, 'wrong password'

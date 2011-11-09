@@ -59,3 +59,5 @@ speechmode_default = False # if True: commands must be preceeded with .
 talkmode = False # if True: all players can use talk command. False: wizards only.
 
 ansi_color_default = False
+
+auto_purge = False
