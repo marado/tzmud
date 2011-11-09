@@ -153,23 +153,31 @@ class TZ(basic.LineReceiver):
                     print 'player', player.name, 'wrong password'
                     self.login_failures += 1
             else:
-                if player.check_password(pwtext):
-                #if True:
-                    self.logged_in = True
-                    player.logged_in = True
-                    self.player = player
-                    player.last = time.time()
-                    player.following = None
-                    self.factory._player_protocols[player_name] = self
+                try:
+                    # if this doesn't fail, then that player is still logging out...
+                    print self.factory._player_protocols[player_name] 
+                    try:
+                        reactor.callLater(0.1, self.login, r)
+                    except:
+                        print 'tzprotocol :: login :: callLater :: fail'
+                except:
+                    if player.check_password(pwtext):
+                    #if True:
+                        self.logged_in = True
+                        player.logged_in = True
+                        self.player = player
+                        player.last = time.time()
+                        player.following = None
+                        self.factory._player_protocols[player_name] = self
 
-                    wizard.cmd_teleport(self, {})
-                    reactor.callLater(0.6, actions.cmd_look, self,
-                                        dict(verb='look'))
-                    print 'player', player.name, 'logged in'
-                else:
-                    self.simessage('Incorrect user name or password.')
-                    print 'player', player.name, 'wrong password'
-                    self.login_failures += 1
+                        wizard.cmd_teleport(self, {})
+                        reactor.callLater(0.6, actions.cmd_look, self,
+                                            dict(verb='look'))
+                        print 'player', player.name, 'logged in'
+                    else:
+                        self.simessage('Incorrect user name or password.')
+                        print 'player', player.name, 'wrong password'
+                        self.login_failures += 1
 
             if self.login_failures >= 3:
                 self.transport.loseConnection()
