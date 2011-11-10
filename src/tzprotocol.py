@@ -637,7 +637,7 @@ class TZ(basic.LineReceiver):
         'Return list of names of players connected right now.'
 
         names = cls.factory._player_protocols.keys()
-        return [players.getname(name) for name in names]
+        return [unicode(players.getname(name))+'\t'+players.getname(name).room.name for name in names]
 
     @classmethod
     def clients(cls):
