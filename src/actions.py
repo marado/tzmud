@@ -848,6 +848,21 @@ def cmd_emote(s, r):
     s.room.action(dict(act='emote', actor=s.player, raw=words))
 
 
+def cmd_think(s, r):
+    '''think <text>
+
+    Show the text between thought bubbles, to the room where you're on. 
+	For example: Andy thinks . o O ( therefore I am )
+
+    '''
+
+    words = r['message']
+
+    msg = u'%s thinks . o O ( %s )' % (s.player, words)
+    s.message(msg)
+    s.room.action(dict(act='emote', actor=s.player, raw=words))
+
+
 def cmd_quit(s, r=None):
     '''quit
 

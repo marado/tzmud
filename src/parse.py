@@ -179,6 +179,8 @@ emote_verb = oneOf('emote :', caseless=True)('verb')
 emote_verb.setParseAction(replaceWith('emote'))
 emote = emote_verb + msg
 
+think_verb = CaselessLiteral('think')('verb')
+think = think_verb + msg
 
 quit_verb = oneOf('quit', caseless=True)('verb')
 quit_verb.setParseAction(replaceWith('quit'))
@@ -226,9 +228,9 @@ section = Empty()('section')
 section.setParseAction(replaceWith('actions'))
 
 if conf.talkmode:
-    actions_parser = section + (info | time | take | get | drop | put | inventory | wear | remove | use | lock | listen | look | unlock | follow | exits | say | tell | shout | emote | quit_ | who | stats | set | unset | password | xyzzy | help | go | catchall)
+    actions_parser = section + (info | time | take | get | drop | put | inventory | wear | remove | use | lock | listen | look | unlock | follow | exits | say | tell | shout | emote | think | quit_ | who | stats | set | unset | password | xyzzy | help | go | catchall)
 else:
-    actions_parser = section + (info | time | take | get | drop | put | inventory | wear | remove | use | lock | listen | look | unlock | follow | exits | say | shout | emote | quit_ | who | stats | set | unset | password | xyzzy | help | go | catchall)
+    actions_parser = section + (info | time | take | get | drop | put | inventory | wear | remove | use | lock | listen | look | unlock | follow | exits | say | shout | emote | think | quit_ | who | stats | set | unset | password | xyzzy | help | go | catchall)
 
 
 wiz = CaselessLiteral('@')('section')
