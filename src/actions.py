@@ -894,6 +894,20 @@ def cmd_cls(s, r=None):
     for lines in range(60): # TODO: of course, we could make the number of lines a configurable number...
         s.message()
 
+def cmd_recap(s, r):
+    '''recap <recapped-name>
+
+    Define your character's "recapped name". For instance, if your 
+    name is "Montainrat", you can define it to be seen as 
+    "MontainRat". You cannot, however, use this command to change 
+    your name.
+    '''
+    recapped = r['message']
+    if s.player.name.lower() == recapped.lower():
+        s.player.extra_settings['recap'] = blue(recapped)
+        s.message('Your name will now be seen by everyone as ' + s.player.extra_settings['recap'])
+    else:
+        s.message('The recapped name still has to match your proper name.')
  
 def cmd_set(s, r=None):
     '''set <var> [= <value>]

@@ -107,7 +107,8 @@ class Player(Character):
         add(self)
 
         self.pwhash = None
-        self.user_settings = TZDict()
+        self.user_settings = TZDict() # boolean settings
+        self.extra_settings = TZDict() # non-boolean settings
 
         self.logged_in = False
         self.created = time.time()
@@ -208,8 +209,11 @@ class Player(Character):
     def __str__(self):
         'Return the colorized name of this player.'
 
-        name = Character.__str__(self)
-        return blue(name)
+        try:
+            name = self.extra_settings['recap']
+        except: 
+            name = blue(Character.__str__(self))
+        return name
 
     #def __repr__(self):
         #return '''\
