@@ -195,6 +195,8 @@ class TZ(basic.LineReceiver):
                 self.simessage('Name already in use.')
             elif player_name=='quit':
                 self.simessage('Cannot use the name "quit"')
+            elif player_name.isalpha()==False:
+                self.simessage('Names can have only alphabet characters.')
             else:
                 player = players.Player(player_name)
                 player.set_password(pwtext)
