@@ -482,9 +482,6 @@ class Player(Character):
         teleporter = info['character']
         if teleporter is not self and self.can_see(teleporter):
             self.message(teleporter, 'appears.')
-        elif teleporter is self:
-            self.message('You have been teleported.')
-            self.message(self.room)
 
     def near_teleport_item_away(self, info):
         'Something has been "teleport"ed away from near this player.'
