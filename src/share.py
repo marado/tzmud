@@ -1044,7 +1044,8 @@ Character (%s): %s
                                     delay=0.2,
                                     actor=None,
                                     character=self))
-            reactor.callLater(0.4, self.move, destination)
+            #reactor.callLater(0.4, self.move, destination)
+            self.move(destination)
             destination.action(dict(act='teleport_character_in',
                                         delay=0.6,
                                         actor=None,
